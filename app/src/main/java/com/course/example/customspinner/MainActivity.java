@@ -9,8 +9,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    String[] countryNames={"Denmark","China","Germany","UK","India","Canada"};
-    int flags[] = {R.drawable.denmark, R.drawable.china, R.drawable.germany, R.drawable.uk, R.drawable.india, R.drawable.ca};
+    String[] countryNames={"Denmark","China","Germany","US", "UK","India","Canada","Norway"};
+    int flags[] = {R.drawable.denmark, R.drawable.china, R.drawable.germany, R.drawable.us, R.drawable.uk,
+                                           R.drawable.india, R.drawable.ca, R.drawable.norway};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Auto-generated method stub
+       
     }
 }
