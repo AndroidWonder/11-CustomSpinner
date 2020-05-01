@@ -3,6 +3,7 @@ package com.course.example.customspinner;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -21,18 +22,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Spinner spin = (Spinner) findViewById(R.id.simpleSpinner);
         spin.setOnItemSelectedListener(this);
 
-        CustomAdapter customAdapter=new CustomAdapter(getApplicationContext(),flags,countryNames);
+        CustomAdapter customAdapter=new CustomAdapter(this,flags,countryNames);
         spin.setAdapter(customAdapter);
     }
 
     //Performing action onItemSelected and onNothing selected
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
-        Toast.makeText(getApplicationContext(), countryNames[position], Toast.LENGTH_LONG).show();
+        Toast.makeText(this, countryNames[position], Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
-       
+
     }
 }
