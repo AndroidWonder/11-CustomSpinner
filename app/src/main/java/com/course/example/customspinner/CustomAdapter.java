@@ -15,6 +15,7 @@ public class CustomAdapter extends BaseAdapter {
     LayoutInflater inflter;
 
     public CustomAdapter(Context applicationContext, int[] flags, String[] countryNames) {
+     //   super(applicationContext, 0, countryNames);
         this.context = applicationContext;
         this.flags = flags;
         this.countryNames = countryNames;
@@ -43,6 +44,10 @@ public class CustomAdapter extends BaseAdapter {
         TextView names = (TextView) view.findViewById(R.id.textView);
         icon.setImageResource(flags[i]);
         names.setText(countryNames[i]);
+
+        //remove first item from showing before selection made
+        if (i == 0) icon.setVisibility(View.GONE);
+
         return view;
     }
 }

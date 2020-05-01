@@ -10,8 +10,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    String[] countryNames={"Denmark","China","Germany","US", "UK","India","Canada","Norway"};
-    int flags[] = {R.drawable.denmark, R.drawable.china, R.drawable.germany, R.drawable.us, R.drawable.uk,
+    //arrays are set up with dummy first items to avoid selection showing when spinner is initializing
+    String[] countryNames={"Select a Country", "Denmark","China","Germany","US", "UK","India","Canada","Norway"};
+    int flags[] = {0, R.drawable.denmark, R.drawable.china, R.drawable.germany, R.drawable.us, R.drawable.uk,
                                            R.drawable.india, R.drawable.ca, R.drawable.norway};
 
     @Override
