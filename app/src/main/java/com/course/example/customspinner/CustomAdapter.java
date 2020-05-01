@@ -15,7 +15,6 @@ public class CustomAdapter extends BaseAdapter {
     LayoutInflater inflter;
 
     public CustomAdapter(Context applicationContext, int[] flags, String[] countryNames) {
-     //   super(applicationContext, 0, countryNames);
         this.context = applicationContext;
         this.flags = flags;
         this.countryNames = countryNames;
