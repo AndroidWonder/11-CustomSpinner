@@ -27,25 +27,25 @@ public class CustomAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public Object getItem(int position) {
         return null;
     }
 
     @Override
-    public long getItemId(int i) {
+    public long getItemId(int position) {
         return 0;
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int position, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.custom_spinner_items, null);
         ImageView icon = (ImageView) view.findViewById(R.id.imageView);
         TextView names = (TextView) view.findViewById(R.id.textView);
-        icon.setImageResource(flags[i]);
-        names.setText(countryNames[i]);
+        icon.setImageResource(flags[position]);
+        names.setText(countryNames[position]);
 
         //remove first item from showing before selection made
-        if (i == 0) icon.setVisibility(View.GONE);
+        if (position == 0) icon.setVisibility(View.GONE);
 
         return view;
     }
